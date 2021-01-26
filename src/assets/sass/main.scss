@@ -1,0 +1,10 @@
+.tipCalculator {
+  display: grid;
+  grid-template-columns: 3fr 8fr 3fr;
+
+  .calculator {
+    grid-column: 2/3;
+    display: flex;
+    flex-flow: column;
+  }
+}
