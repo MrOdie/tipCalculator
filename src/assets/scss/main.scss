@@ -1,0 +1,67 @@
+.tipCalculatorContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+
+
+  .tipCalculator {
+    display: grid;
+    grid-template-columns: 3fr 8fr 3fr;
+
+    .calculator {
+      grid-column: 2/3;
+      display: flex;
+      flex-flow: column;
+      border: 1px solid #e3e3e3;
+      padding: 25px;
+      border-radius: 5px;
+
+      .calculatorForm {
+        
+        legend {
+          margin-bottom: .5rem;
+        }
+
+        .contentDiv {
+
+          .label {
+            display: block;
+          }
+
+          .input {
+            width: 100%;
+            display: block;
+          }
+        }
+
+        .submitBtn {
+          margin-top: .5rem;
+          width: 100%;
+          display: block;
+          background-color: #12263A;
+          border: 1px #12263a;
+          color: #eee;
+          padding: 5px 10px;
+          border-radius: 5px;
+          cursor: pointer;
+
+          &:active,
+          &:hover,
+          &:focus {
+            background-color: lighten(#12263A, 10%);
+            border-color: lighten(#12263A, 10%);
+          }
+        }
+      }
+    }
+    .results {
+      grid-column: 2/3;
+      margin: 1rem 0 0;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
