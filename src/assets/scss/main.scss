@@ -7,7 +7,8 @@
 
   .tipCalculator {
     display: grid;
-    grid-template-columns: 3fr 8fr 3fr;
+    grid-template-columns: 3fr 3fr 3fr;
+    width: inherit;
 
     .calculator {
       grid-column: 2/3;

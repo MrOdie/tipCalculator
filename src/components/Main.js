@@ -11,7 +11,25 @@ const Main = () => {
     tipPP: ""
   });
 
+  const checkInputType = (input) => {
+    let isNum, veritas;
+    
+    isNum = Math.abs(input);
+    veritas = true;
+
+    if (isNaN(isNum)) {
+      veritas = false;
+    }
+
+    return veritas;
+  }
+
   const handleTotal = (event) => {
+
+    let validation = checkInputType(event.target.value)
+    if (validation) {
+      return
+    }
     setState(prevState => ({
       ...prevState,
       total: event.target.value
@@ -19,6 +37,11 @@ const Main = () => {
   }
 
   const handleService = (event) => {
+    let validation = checkInputType(event.target.value)
+    if (validation) {
+      return
+    }
+
     setState(prevState => ({
       ...prevState,
       service: event.target.value
@@ -26,6 +49,11 @@ const Main = () => {
   }
 
   const handleParty = (event) => {
+    let validation = checkInputType(event.target.value)
+    if (validation) {
+      return
+    }
+
     setState(prevState => ({
       ...prevState,
       partySize: event.target.value
